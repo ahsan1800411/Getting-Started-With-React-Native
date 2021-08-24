@@ -3,9 +3,16 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
+  const handlePress = () => {
+    console.log("Hello");
+  };
   return (
     <View style={styles.container}>
-      <Text>Hello React Native</Text>
+      <Text numberOfLines={1} onPress={handlePress}>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo tenetur et
+        molestias saepe voluptatibus assumenda sapiente, dicta libero optio
+        exercitationem.
+      </Text>
       <StatusBar style='auto' />
     </View>
   );
