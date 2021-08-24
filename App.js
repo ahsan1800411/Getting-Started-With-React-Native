@@ -21,16 +21,32 @@ export default function App() {
   // console.log(Dimensions.get("screen"));
 
   return (
-    <SafeAreaView style={[styles.container]}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "white",
+      }}
+    >
       <View
         style={{
-          width: "50%",
-          height: 70,
+          flex: 1,
+          backgroundColor: "tomato",
+        }}
+      ></View>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: "gold",
+        }}
+      ></View>
+      <View
+        style={{
+          flex: 1,
           backgroundColor: "tomato",
         }}
       ></View>
       <StatusBar style='auto' />
-    </SafeAreaView>
+    </View>
   );
 }
 
