@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   TouchableHighlight,
   TouchableNativeFeedback,
+  Button,
 } from "react-native";
 
 export default function App() {
@@ -16,20 +17,7 @@ export default function App() {
   };
   return (
     <View style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo tenetur et
-        molestias saepe voluptatibus assumenda sapiente, dicta libero optio
-        exercitationem.
-      </Text>
-      <TouchableNativeFeedback onPress={handlePress}>
-        <Image
-          source={{
-            width: 200,
-            height: 200,
-            uri: "https://picsum.photos/200/300",
-          }}
-        />
-      </TouchableNativeFeedback>
+      <Button title='Click Me' onPress={handlePress} color='red' />
       <StatusBar style='auto' />
     </View>
   );
@@ -38,7 +26,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "dodgerblue",
     alignItems: "center",
     justifyContent: "center",
   },
