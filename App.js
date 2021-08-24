@@ -1,4 +1,4 @@
-import { StatusBar } from "expo-status-bar";
+// import { StatusBar } from "expo-status-bar";
 import React from "react";
 import {
   Image,
@@ -10,12 +10,14 @@ import {
   TouchableNativeFeedback,
   Button,
   Alert,
+  Platform,
+  StatusBar,
 } from "react-native";
 
 export default function App() {
   const handlePress = () => {};
   return (
-    <View style={[styles.container, styleContainer]}>
+    <View style={[styles.container]}>
       <Button
         title='Click Me'
         onPress={() =>
@@ -27,13 +29,14 @@ export default function App() {
   );
 }
 
-const styleContainer = { backgroundColor: "gold" };
+// const styleContainer = { backgroundColor: "gold" };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "orange",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
 });
