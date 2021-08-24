@@ -1,6 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableWithoutFeedback,
+  TouchableHighlight,
+  TouchableNativeFeedback,
+} from "react-native";
 
 export default function App() {
   const handlePress = () => {
@@ -13,13 +21,15 @@ export default function App() {
         molestias saepe voluptatibus assumenda sapiente, dicta libero optio
         exercitationem.
       </Text>
-      <Image
-        source={{
-          width: 200,
-          height: 200,
-          uri: "https://picsum.photos/200/300",
-        }}
-      />
+      <TouchableNativeFeedback onPress={handlePress}>
+        <Image
+          source={{
+            width: 200,
+            height: 200,
+            uri: "https://picsum.photos/200/300",
+          }}
+        />
+      </TouchableNativeFeedback>
       <StatusBar style='auto' />
     </View>
   );
