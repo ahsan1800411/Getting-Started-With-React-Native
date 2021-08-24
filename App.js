@@ -15,7 +15,7 @@ import {
 export default function App() {
   const handlePress = () => {};
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, styleContainer]}>
       <Button
         title='Click Me'
         onPress={() =>
@@ -27,10 +27,12 @@ export default function App() {
   );
 }
 
+const styleContainer = { backgroundColor: "gold" };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "dodgerblue",
+    backgroundColor: "orange",
     alignItems: "center",
     justifyContent: "center",
   },
