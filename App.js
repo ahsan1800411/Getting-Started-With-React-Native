@@ -12,20 +12,25 @@ import {
   Alert,
   Platform,
   StatusBar,
+  Dimensions,
+  SafeAreaView,
 } from "react-native";
 
 export default function App() {
-  const handlePress = () => {};
+  // const handlePress = () => {};
+  // console.log(Dimensions.get("screen"));
+
   return (
-    <View style={[styles.container]}>
-      <Button
-        title='Click Me'
-        onPress={() =>
-          Alert.prompt("My title", "My Message", (text) => console.log(text))
-        }
-      />
+    <SafeAreaView style={[styles.container]}>
+      <View
+        style={{
+          width: "50%",
+          height: 70,
+          backgroundColor: "tomato",
+        }}
+      ></View>
       <StatusBar style='auto' />
-    </View>
+    </SafeAreaView>
   );
 }
 
