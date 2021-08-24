@@ -9,15 +9,19 @@ import {
   TouchableHighlight,
   TouchableNativeFeedback,
   Button,
+  Alert,
 } from "react-native";
 
 export default function App() {
-  const handlePress = () => {
-    console.log("Hello");
-  };
+  const handlePress = () => {};
   return (
     <View style={styles.container}>
-      <Button title='Click Me' onPress={handlePress} color='red' />
+      <Button
+        title='Click Me'
+        onPress={() =>
+          Alert.prompt("My title", "My Message", (text) => console.log(text))
+        }
+      />
       <StatusBar style='auto' />
     </View>
   );
