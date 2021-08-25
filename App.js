@@ -19,6 +19,7 @@ import Card from "./components/Card";
 
 export default function App() {
   return (
+    // <ViewImageScreen />
     <ListingDetailsScreen />
     // <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
     //   <Card
